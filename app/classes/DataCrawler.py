@@ -31,6 +31,7 @@ class DataCrawler:
             imgs = []
             driver = self.__set_driver()
             imgs = self.__get_imgs(driver)
+            driver.close()
             self.__download_imgs(imgs)
             
             print("Imgs:", len(imgs))
